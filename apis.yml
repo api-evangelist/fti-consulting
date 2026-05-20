@@ -28,6 +28,8 @@ apis:
     description: >-
       The FTI Consulting API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/fti-consulting
   - type: Website
     url: https://www.fticonsulting.com
 maintainers:
