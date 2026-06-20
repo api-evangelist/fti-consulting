@@ -2,7 +2,7 @@ aid: fti-consulting
 url: https://raw.githubusercontent.com/api-evangelist/fti-consulting/refs/heads/main/apis.yml
 name: FTI Consulting
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Consulting
   - Economic
@@ -19,7 +19,7 @@ apis:
       - Consulting
       - Economic
       - Financial Advisory
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.fticonsulting.com
     humanURL: https://developer.fticonsulting.com
     properties:
