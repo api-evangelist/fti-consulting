@@ -28,10 +28,14 @@ apis:
     description: >-
       The FTI Consulting API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: DomainSecurity
+    url: security/fti-consulting-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/fti-consulting
   - type: Website
     url: https://www.fticonsulting.com
+  - url: https://www.fticonsulting.com/insights
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
