@@ -28,28 +28,54 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fti-consulting.png
 tags:
   - Consulting
+  - Economics
+  - Financial Advisory
+  - Professional Services
+  - Restructuring
+  - Forensic Accounting
+tags_raw:
+  - Consulting
   - Economic
   - Financial Advisory
+  - Professional Services
+  - Restructuring
+  - Forensic Accounting
 description: >-
-  FTI Consulting is a major US corporation and Fortune 1000 company. The FTI Consulting API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+  FTI Consulting is a global business advisory firm (NYSE: FCN, Fortune 1000) working in corporate
+  finance and restructuring, economic consulting, forensic and litigation consulting, strategic
+  communications and technology (e-discovery and information governance). Engagements are bespoke
+  professional services; the firm publishes no public developer program, API reference or
+  machine-readable contract. The only agent-facing document it serves is an llms.txt site index on
+  www.fticonsulting.com.
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-09-17'
 specificationVersion: '0.23'
 apis:
   - aid: fti-consulting:fti-consulting-api
     name: FTI Consulting API
     tags:
       - Consulting
+      - Economics
+      - Financial Advisory
+      - Professional Services
+      - Restructuring
+      - Forensic Accounting
+    tags_raw:
+      - Consulting
       - Economic
       - Financial Advisory
+      - Professional Services
+      - Restructuring
+      - Forensic Accounting
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.fticonsulting.com
-    humanURL: https://developer.fticonsulting.com
-    properties:
-      - url: https://developer.fticonsulting.com/docs
-        type: Documentation
+    humanURL: https://www.fticonsulting.com
+    properties: []
     description: >-
-      The FTI Consulting API provides access to platform services and data for enterprise integration and automation.
+      Placeholder entry — FTI Consulting publishes no public API. The scaffolded hosts
+      developer.fticonsulting.com and api.fticonsulting.com do not resolve (DNS NXDOMAIN, probed
+      2026-09-17), so the former Documentation pointer was removed as dead and humanURL points at the
+      corporate site.
 common:
   - type: DomainSecurity
     url: security/fti-consulting-domain-security.yml
@@ -59,6 +85,40 @@ common:
     url: https://www.fticonsulting.com
   - url: https://www.fticonsulting.com/insights
     type: Blog
+  - type: LLMsTxt
+    url: llms/fti-consulting-llms.txt
+  - type: PrivacyPolicy
+    url: https://www.fticonsulting.com/about/privacy-policy
+  - type: TermsOfService
+    url: https://www.fticonsulting.com/about/legal
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-17'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    FTI Consulting is a professional-services advisory firm with no developer program: the scaffolded
+    developer.fticonsulting.com and api.fticonsulting.com hosts are DNS NXDOMAIN, www.fticonsulting.com
+    and the Technology segment site www.ftitechnology.com 404 every spec and /.well-known/ path, the
+    5,382-URL sitemap and the firm's own llms.txt list no API or developer page, and the fticonsulting
+    GitHub org has zero public repositories.
+  evidence:
+    - url: https://developer.fticonsulting.com/docs
+      status: 0
+    - url: https://api.fticonsulting.com/openapi.json
+      status: 0
+    - url: https://www.fticonsulting.com/openapi.json
+      status: 404
+    - url: https://www.fticonsulting.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.fticonsulting.com/llms.txt
+      status: 200
+    - url: https://www.ftitechnology.com/developers
+      status: 404
+  checked: '2026-09-17'

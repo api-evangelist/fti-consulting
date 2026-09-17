@@ -1,0 +1,95 @@
+generated: '2026-09-17'
+method: probed
+source: live HTTP probes of /.well-known/* on every host the record names (registrable domain, www, the apis.yml baseURL + humanURL hosts) plus the Technology segment site
+note: >-
+  No well-known document is served on any host. www.fticonsulting.com answers 404 (HTML) on every
+  path; the bare domain 301s each path to www; developer.fticonsulting.com and api.fticonsulting.com
+  (the scaffolded humanURL/baseURL hosts in apis.yml) do not resolve at all (DNS NXDOMAIN, recorded
+  as status 0). No WellKnown or SecurityTxt pointer is emitted because nothing was served. The one
+  agent-facing document the provider does publish is /llms.txt on www.fticonsulting.com (saved to
+  llms/fti-consulting-llms.txt), which is not a /.well-known/ path.
+hosts:
+- host: www.fticonsulting.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: fticonsulting.com
+  note: every path 301s to the same path on www.fticonsulting.com, which 404s
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /.well-known/agent-card.json
+    status: 301
+  - path: /.well-known/agent.json
+    status: 301
+- host: developer.fticonsulting.com
+  note: DNS NXDOMAIN — host does not exist; status 0 means no connection was possible
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+  - path: /.well-known/openid-configuration
+    status: 0
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+  - path: /.well-known/api-catalog
+    status: 0
+  - path: /.well-known/ai-plugin.json
+    status: 0
+  - path: /.well-known/agent-card.json
+    status: 0
+  - path: /.well-known/agent.json
+    status: 0
+- host: api.fticonsulting.com
+  note: DNS NXDOMAIN — host does not exist; status 0 means no connection was possible
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+  - path: /.well-known/openid-configuration
+    status: 0
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+  - path: /.well-known/api-catalog
+    status: 0
+  - path: /.well-known/ai-plugin.json
+    status: 0
+  - path: /.well-known/agent-card.json
+    status: 0
+  - path: /.well-known/agent.json
+    status: 0
+- host: www.ftitechnology.com
+  note: FTI Consulting's Technology segment site; every well-known path 404s
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
