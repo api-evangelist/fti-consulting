@@ -52,6 +52,7 @@ modified: '2026-09-17'
 specificationVersion: '0.23'
 apis:
   - aid: fti-consulting:fti-consulting-api
+    x-published: false
     name: FTI Consulting API
     tags:
       - Consulting
