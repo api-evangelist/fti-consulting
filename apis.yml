@@ -78,6 +78,12 @@ apis:
       2026-09-17), so the former Documentation pointer was removed as dead and humanURL points at the
       corporate site.
 common:
+  - type: Plans
+    url: plans/fti-consulting-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/fti-consulting-rate-limits.yml
+  - type: FinOps
+    url: finops/fti-consulting-finops.yml
   - type: DomainSecurity
     url: security/fti-consulting-domain-security.yml
   - type: LinkedIn
