@@ -1,0 +1,59 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: FTI Consulting
+providerId: fti-consulting
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Consulting
+  - Professional Services
+  - Digital
+description: FTI Consulting is a professional-services firm. Engagements are scoped and priced via
+  proposal; there is no public developer API or self-service pricing surface. Digital service
+  offerings exist but are not exposed as machine-readable plans.
+notes: No public API or pricing page; engagements are bespoke. Scaffold retained as a placeholder.
+sources:
+  - https://www.fticonsulting.com/
+plans:
+  - id: fti-consulting-engagement
+    name: Consulting Engagement
+    type: enterprise
+    description: Custom-quoted consulting engagement scoped via FTI sales/proposal process.
+    entries:
+      - label: Engagement
+        name: engagement
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: Custom-scoped engagement
+      - name: Hourly / fixed-fee / retainer billing options
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  plans:
+  - name: Consulting Engagement
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - month
